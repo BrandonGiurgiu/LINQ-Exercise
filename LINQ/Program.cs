@@ -4,7 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var videoGames = new List<string> { "Call of Duty", "ATV", "Spiderman", "Grand Turismo" };
+
+            var order = videoGames.OrderBy(game => game.Length);
+
+            foreach (var game in order)
+            {
+                Console.WriteLine($" {game} ");
+                Console.WriteLine("------------");
+            }
+
+            Console.ReadLine();
+
         }
     }
 }
